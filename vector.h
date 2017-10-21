@@ -6,6 +6,8 @@ namespace mathy{
 template<typename vectorType>
 decltype(auto) dot(const vectorType l, const vectorType r);
 
+template<typename T,int rows,int columns>
+struct matrix;
 
 template<typename _T,size_t N>
 struct vector{
@@ -52,7 +54,7 @@ public:
 		return sqrt(dot(*this, *this));
 	}
 	//template<typename T,size_t rows,size_t columns>
-		
+	
 	
 private:
 	std::array<_T, N> m_items;
